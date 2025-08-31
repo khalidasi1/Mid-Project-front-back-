@@ -1,0 +1,16 @@
+# deps
+node_modules/
+
+# build output (tsc output)
+dist/
+
+# sourcemaps
+*.map
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+
+# logs
+npm-debug.log*
+yarn-debug.log*

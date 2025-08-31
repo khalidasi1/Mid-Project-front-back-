@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact – Khalid side prj</title>
+    <link rel="stylesheet" href="proj.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand"><a href="index.html">Khalid side prj</a></div>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page">
+      <main class="card">
+        <h1>Contact</h1>
+        <p style="margin: 8px 0 0">You can reach me via:</p>
+        <ul style="margin: 8px 0 0; padding-left: 18px">
+          <li>
+            Email:
+            <a href="mailto:khalidmma110@gmail.com">khalidmma110@gmail.com</a>
+          </li>
+          <li>Phone: <a href="tel:+966531906383">+966-531906383</a></li>
+        </ul>
+      </main>
+
+      <section class="card" style="margin-top: 16px">
+        <h2 style="margin: 0 0 10px">Quick Message (demo)</h2>
+        <form
+          onsubmit="event.preventDefault(); alert('Message captured (demo)');"
+        >
+          <div style="display: grid; gap: 10px">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                background: #0b1220;
+                color: var(--text);
+              "
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                background: #0b1220;
+                color: var(--text);
+              "
+            />
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Your message"
+              style="
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                background: #0b1220;
+                color: var(--text);
+                resize: vertical;
+                max-width: 100%;
+                min-height: 110px;
+                max-height: 40vh;
+                overflow: auto;
+              "
+            ></textarea>
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

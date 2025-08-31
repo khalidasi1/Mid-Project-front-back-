@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Stopwatch</title>
+    <link rel="stylesheet" href="proj.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand"><a href="index.html">Khalid side prj</a></div>
+        <nav class="nav">
+          <a href="index.html" class="active" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page">
+      <main class="card">
+        <h1>Stopwatch</h1>
+
+        <div id="time" class="time">0.000 s</div>
+
+        <div class="controls">
+          <button id="startBtn">Start</button>
+          <button id="stopBtn">Stop</button>
+          <button id="resetBtn" class="ghost">Reset</button>
+        </div>
+
+        <p class="hint">
+          Click start and stop whenever you like. The time updates automatically
+          while running.
+        </p>
+      </main>
+
+      <section class="card" style="margin-top: 16px">
+        <h2 style="margin: 0 0 10px">Owner Info</h2>
+        <p style="margin: 6px 0">Name: Khalid Asiri</p>
+        <p style="margin: 6px 0">Role: Trainee / Web Learner</p>
+        <p style="margin: 6px 0">Location: Saudi Arabia</p>
+      </section>
+    </div>
+
+    <script src="../dist/proj.js"></script>
+  </body>
+</html>
