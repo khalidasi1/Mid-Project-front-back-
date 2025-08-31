@@ -89,3 +89,47 @@ const intervalId: number = window.setInterval(() => {
 }, 100);
 
 render();
+
+/* ===== Contact page: email validation ===== */
+function isValidEmail(v: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+}
+
+const contactForm = document.querySelector<HTMLFormElement>("#contactForm");
+const emailInput = document.querySelector<HTMLInputElement>("#contactEmail");
+const emailError = document.querySelector<HTMLElement>("#emailError");
+
+if (contactForm && emailInput && emailError) {
+  const showEmailError = (msg?: string) => {
+    if (msg) {
+      emailError.textContent = msg;
+      (emailError as HTMLElement).style.display = "block";
+      emailInput.style.borderColor = "#ef4444";
+      emailInput.setAttribute("aria-invalid", "true");
+    } else {
+      emailError.textContent = "";
+      (emailError as HTMLElement).style.display = "none";
+      emailInput.style.borderColor = "";
+      emailInput.removeAttribute("aria-invalid");
+    }
+  };
+
+  emailInput.addEventListener("input", () => {
+    if (emailInput.value === "" || isValidEmail(emailInput.value)) {
+      showEmailError();
+    }
+  });
+
+  contactForm.addEventListener("submit", (e) => {
+    if (!isValidEmail(emailInput.value)) {
+      e.preventDefault();
+      showEmailError("Please enter a valid email (e.g. name@example.com).");
+      emailInput.focus();
+      return;
+    }
+    e.preventDefault();
+    showEmailError();
+    alert("Message captured (demo)");
+    contactForm.reset();
+  });
+}
