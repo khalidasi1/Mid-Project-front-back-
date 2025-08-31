@@ -8,7 +8,7 @@ This is a simple web project built with **HTML**, **CSS**, and **TypeScript**.
    ```bash
    npm i -D typescript
    ```
-1. Install TypeScript:
+1. Run TypeScript:
    npx tsc -w
    or
    tsc
